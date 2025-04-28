@@ -11,7 +11,7 @@ This project involves the iterative adjustment of spike detections in neural dat
 
 ## Tree of Code
 - **main_pipeline.m**
-- **testDetectionAlgo06102024.m**
+  - **testDetectionAlgo06102024.m**
   - **detection_algorithm**
   - **gettingSpikeTimes3**
   - **spikeTimes2Logical**
