@@ -12,31 +12,31 @@ This project involves the iterative adjustment of spike detections in neural dat
 ## Tree of Code
 - **main_pipeline.m**
   - **testDetectionAlgo06102024.m**
-  - **detection_algorithm**
-  - **gettingSpikeTimes3**
-  - **spikeTimes2Logical**
-  - **run_nnmf**
-    - **ksGaussian**
-    - **seqNMF**
-      - **parse_seqNMF_params**
-      - **reconstruct**
-      - **shiftFactors**
-      - **SimpleWHPlot**
-      - **computeLoadingPercentPower**
-  - **mapHtoNerveGroups**
-  - **plotAllNeuronsStemSortedwSaveWOAttenuatedNeurons**
-  - **plotAllNeuronsStemSortedwSave**
-    - **plotproductWHwSave**
-  - **labelNeuronsNNMFwSave**
-    - **readdet_var**
-    - **alignKernels** (nested function)
-  - **extractBumps**
-  - **plotIsolatedBumpswSave**
-  - **plotNNProBumpswSave**
-    - **padWithAdjacentValues** (nested function)
-  - **plotNewNormBumps**
-  - **plotNNAvgBumpswSave**
-    - **padWithNaNs** (nested function)
+    - **detection_algorithm**
+    - **gettingSpikeTimes3**
+    - **spikeTimes2Logical**
+    - **run_nnmf**
+      - **ksGaussian**
+      - **seqNMF**
+        - **parse_seqNMF_params**
+        - **reconstruct**
+        - **shiftFactors**
+        - **SimpleWHPlot**
+        - **computeLoadingPercentPower**
+    - **mapHtoNerveGroups**
+    - **plotAllNeuronsStemSortedwSaveWOAttenuatedNeurons**
+    - **plotAllNeuronsStemSortedwSave**
+      - **plotproductWHwSave**
+    - **labelNeuronsNNMFwSave**
+      - **readdet_var**
+      - **alignKernels** (nested function)
+    - **extractBumps**
+    - **plotIsolatedBumpswSave**
+    - **plotNNProBumpswSave**
+      - **padWithAdjacentValues** (nested function)
+    - **plotNewNormBumps**
+    - **plotNNAvgBumpswSave**
+      - **padWithNaNs** (nested function)
 
 ## Code Structure and Functionality
 
