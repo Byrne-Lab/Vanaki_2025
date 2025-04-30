@@ -1,12 +1,12 @@
 # README
 
 ## Overview
-This project involves the iterative adjustment of spike detections in neural data recordings. The main pipeline script processes spiking data from various recordings, applies thresholds, and combines the results. The detection algorithm script tests the spike detection algorithm and saves the results. The goal is to analyze neural activity by detecting spikes, applying non-negative matrix factorization (NNMF), and visualizing the results.
+This project involves the iterative adjustment of spike detections in neural data recordings. The main pipeline script processes spiking data from various recordings, applies thresholds, and combines the results. The detection algorithm script tests the spike detection algorithm and saves the results. The goal is to analyze neural activity by detecting spikes, applying non-negative matrix factorization (NMF), and visualizing the results.
 
 ## Main Components
 - **Main Pipeline Script**: Iteratively processes spiking data, applies thresholds, and combines results.
 - **Detection Algorithm Script**: Tests the spike detection algorithm and saves the results.
-- **NNMF Analysis**: Applies NNMF to the spike matrix to identify neural patterns.
+- **NMF Analysis**: Applies NMF to the spike matrix to identify neural patterns.
 - **Visualization**: Generates and saves various plots to visualize the results.
 
 ## Tree of Code
@@ -55,7 +55,7 @@ This project involves the iterative adjustment of spike detections in neural dat
   - **Filters and processes channels**: Identifies channels to be analyzed and removes attenuated neurons if necessary.
   - **Spike detection and storage**: Loops through each channel, applies the detection algorithm, and stores the results.
   - **Nerve times and spike matrix**: Extracts spike times for specific nerves and converts them to a logical matrix.
-  - **Non-negative matrix factorization (NNMF)**: Applies NNMF to the spike matrix and saves the results.
+  - **Non-negative matrix factorization (NMF)**: Applies NMF to the spike matrix and saves the results.
   - **Plotting and saving results**: Generates and saves various plots to visualize the results.
 
 ### Functions
@@ -64,9 +64,9 @@ This project involves the iterative adjustment of spike detections in neural dat
 - **gettingSpikeTimes3**: Extracts spike times from the data.
 - **spikeTimes2Logical**: Converts spike times to a logical matrix.
 
-#### NNMF Functions
+#### NMF Functions
 - **run_nnmf**: Runs non-negative matrix factorization on the spike matrix.
-- **mapHtoNerveGroups**: Maps the NNMF results to nerve groups.
+- **mapHtoNerveGroups**: Maps the NMF results to nerve groups.
 
 #### Visualization Functions
 - **plotAllNeuronsStemSortedwSave**: Plots and saves sorted neuron data.
