@@ -18,7 +18,7 @@ yokePeakTimesProtraction = arrayfun(@(x) find(max(NNYokeCombinedDataCells{x, 1})
 h1 = figure('Name', 'Retraction Module Peak Time');
 
 % Retraction Module Peak Time
-h = boxplot([contPeakTimesRetraction', yokePeakTimesRetraction'], 'Labels', {'Contingent', 'Yoked'}, 'Colors', 'k');
+h = boxplot([contPeakTimesRetraction', yokePeakTimesRetraction'], 'Labels', {'Contingent', 'Yoked'}, 'Colors', 'k','Symbol','');
 set(h, {'LineStyle'}, {'-'});
 set(h, {'LineWidth'}, {1.5});
 set(findobj(gca,'Tag','Box'), 'Color', 'k');
@@ -46,6 +46,7 @@ title('');
 % Save the first figure
 savePath1 = fullfile('C:\Sara\rice\freshman year\uthealth\Completed (spike analyzed) recordings\results03172025rec2HL', 'BoxPlotsRetractionTime04152025.png');
 saveas(h1, savePath1);
+exportgraphics(gcf, 'C:\Sara\rice\freshman year\uthealth\paperfigs\05212025retractiontime.pdf', 'ContentType', 'vector');
 close(h1); % Close the first figure
 
 
@@ -54,7 +55,7 @@ close(h1); % Close the first figure
 h2 = figure('Name', 'Protraction Module Peak Time');
 
 % Protraction Module Peak Time
-h = boxplot([contPeakTimesProtraction', yokePeakTimesProtraction'], 'Labels', {'Contingent', 'Yoked'}, 'Colors', 'k');
+h = boxplot([contPeakTimesProtraction', yokePeakTimesProtraction'], 'Labels', {'Contingent', 'Yoked'}, 'Colors', 'k','Symbol','');
 set(h, {'LineStyle'}, {'-'});
 set(h, {'LineWidth'}, {1.5});
 set(findobj(gca,'Tag','Box'), 'Color', 'k');
@@ -82,6 +83,7 @@ title('');
 % Save the second figure
 savePath2 = fullfile('C:\Sara\rice\freshman year\uthealth\Completed (spike analyzed) recordings\results03172025rec2HL', 'BoxPlotsProtractionTime04152025.png');
 saveas(h2, savePath2);
+exportgraphics(gcf, 'C:\Sara\rice\freshman year\uthealth\paperfigs\05212025protractiontime.pdf', 'ContentType', 'vector');
 close(h2); % Close the second figure
 
 %% 3rd figure
@@ -97,7 +99,7 @@ yokePeakMagnitudesRetraction = arrayfun(@(x) max(NNYokeCombinedDataCells{x, 2}),
 contPeakMagnitudesProtraction = arrayfun(@(x) max(NNContCombinedDataCells{x, 1}), 1:size(NNContCombinedDataCells, 1));
 yokePeakMagnitudesProtraction = arrayfun(@(x) max(NNYokeCombinedDataCells{x, 1}), 1:size(NNYokeCombinedDataCells, 1));
 % Retraction Module Peak Magnitude
-h = boxplot([contPeakMagnitudesRetraction', yokePeakMagnitudesRetraction'], 'Labels', {'Contingent', 'Yoked'}, 'Colors', 'k');
+h = boxplot([contPeakMagnitudesRetraction', yokePeakMagnitudesRetraction'], 'Labels', {'Contingent', 'Yoked'}, 'Colors', 'k','Symbol','');
 set(h, {'LineStyle'}, {'-'});
 set(h, {'LineWidth'}, {1.5});
 set(findobj(gca,'Tag','Box'), 'Color', 'k');
@@ -125,6 +127,8 @@ title('');
 % Save the third figure
 savePath3 = fullfile('C:\Sara\rice\freshman year\uthealth\Completed (spike analyzed) recordings\results03172025rec2HL', 'BoxPlotsRetractionMagnitude04152025.png');
 saveas(h3, savePath3);
+exportgraphics(gcf, 'C:\Sara\rice\freshman year\uthealth\paperfigs\05212025retractionmag.pdf', 'ContentType', 'vector');
+
 close(h3); % Close the third figure
 
 %% 4th figure
@@ -133,7 +137,7 @@ close(h3); % Close the third figure
 h4 = figure('Name', 'Protraction Module Peak Magnitude');
 
 % Protraction Module Peak Magnitude
-h = boxplot([contPeakMagnitudesProtraction', yokePeakMagnitudesProtraction'], 'Labels', {'Contingent', 'Yoked'}, 'Colors', 'k');
+h = boxplot([contPeakMagnitudesProtraction', yokePeakMagnitudesProtraction'], 'Labels', {'Contingent', 'Yoked'}, 'Colors', 'k','Symbol','');
 set(h, {'LineStyle'}, {'-'});
 set(h, {'LineWidth'}, {1.5});
 set(findobj(gca,'Tag','Box'), 'Color', 'k');
@@ -161,6 +165,7 @@ title('');
 % Save the fourth figure
 savePath4 = fullfile('C:\Sara\rice\freshman year\uthealth\Completed (spike analyzed) recordings\results03172025rec2HL', 'BoxPlotsProtractionMagnitude04152025.png');
 saveas(h4, savePath4);
+exportgraphics(gcf, 'C:\Sara\rice\freshman year\uthealth\paperfigs\05212025protractionmag.pdf', 'ContentType', 'vector');
 close(h4); % Close the fourth figure
 
 

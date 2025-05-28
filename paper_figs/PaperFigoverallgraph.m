@@ -91,6 +91,8 @@ set(gca, 'LineWidth', 2);  % Adjust the number to your desired thickness
 % Save the figure
 savePath = fullfile('C:\Sara\rice\freshman year\uthealth\Completed (spike analyzed) recordings\results02192025rec2HL', '03282025Onlyretraction.png');
 saveas(h, savePath);
+exportgraphics(gcf, 'C:\Sara\rice\freshman year\uthealth\paperfigs\05212025retractionavggraph.pdf', 'ContentType', 'vector');
+
 close(h);
 
 
@@ -141,6 +143,8 @@ hold off;
 % Save the figure
 savePath = fullfile('C:\Sara\rice\freshman year\uthealth\Completed (spike analyzed) recordings\results02192025rec2HL', '03272025Onlyprotraction.png');
 saveas(h, savePath);
+exportgraphics(gcf, 'C:\Sara\rice\freshman year\uthealth\paperfigs\05212025protractionavggraph.pdf', 'ContentType', 'vector');
+
 close(h);
 
 %% Function to smooth the data

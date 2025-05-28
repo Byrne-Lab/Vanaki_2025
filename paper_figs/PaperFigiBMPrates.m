@@ -50,7 +50,7 @@ hold off;
 
 % Create box and whisker plot with connecting lines
 figure;
-h = boxplot([ibmp_percentage_cont', ibmp_percentage_yoke'], 'Labels', {'Contingent', 'Yoke'}, 'Colors', 'k');
+h = boxplot([ibmp_percentage_cont', ibmp_percentage_yoke'], 'Labels', {'Contingent', 'Yoke'}, 'Colors', 'k','Symbol','');
 set(h, {'LineStyle'}, {'-'});
 set(h, {'LineWidth'}, {1.5});
 set(findobj(gca,'Tag','Box'), 'Color', 'k');
@@ -66,7 +66,7 @@ patch(get(boxes(1), 'XData'), get(boxes(1), 'YData'), [0.5, 0.5, 0.5], 'FaceAlph
 % Add connecting lines for each pair of cont percentage and yoke percentage
 hold on;
 for i = 1:length(contingent)
-    plot([1.1, 2], [ibmp_percentage_cont(i), ibmp_percentage_yoke(i)], 'Color', [0.8, 0.8, 0.8], 'LineWidth', 1);
+    plot([1, 2], [ibmp_percentage_cont(i), ibmp_percentage_yoke(i)], 'Color', [0.8, 0.8, 0.8], 'LineWidth', 1);
 end
 hold off;
 
@@ -81,4 +81,6 @@ set(gca, 'Box', 'off'); % Remove the top and right lines
 set(gca, 'LineWidth', 2);  % Adjust the number to your desired thickness
 
 title('');
+
+exportgraphics(gcf, 'C:\Sara\rice\freshman year\uthealth\paperfigs\05212025ibmprates.pdf', 'ContentType', 'vector');
 

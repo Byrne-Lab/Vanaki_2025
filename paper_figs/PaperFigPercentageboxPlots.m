@@ -58,7 +58,7 @@ end
 
 %% Create a figure for Retraction Module Percentages
 h1 = figure('Name', 'Retraction Module Percentages');
-h = boxplot([percentagesContRetraction', percentagesYokeRetraction'], 'Labels', {'Contingent', 'Yoked'}, 'Colors', 'k');
+h = boxplot([percentagesContRetraction', percentagesYokeRetraction'], 'Labels', {'Contingent', 'Yoked'}, 'Colors', 'k','Symbol','');
 set(h, {'LineStyle'}, {'-'});
 set(h, {'LineWidth'}, {1.5});
 set(findobj(gca,'Tag','Box'), 'Color', 'k');
@@ -85,11 +85,13 @@ title('');
 % Save the first figure
 savePath1 = fullfile('C:\Sara\rice\freshman year\uthealth\Completed (spike analyzed) recordings\results03172025rec2HL', 'BoxPlotsRetractionPercentages03272025.png');
 saveas(h1, savePath1);
+exportgraphics(gcf, 'C:\Sara\rice\freshman year\uthealth\paperfigs\05212025retractionpercentage.pdf', 'ContentType', 'vector');
+
 close(h1); % Close the first figure
 
 %% Create a figure for Protraction Module Percentages
 h2 = figure('Name', 'Protraction Module Percentages');
-h = boxplot([percentagesContProtraction', percentagesYokeProtraction'], 'Labels', {'Contingent', 'Yoked'}, 'Colors', 'k');
+h = boxplot([percentagesContProtraction', percentagesYokeProtraction'], 'Labels', {'Contingent', 'Yoked'}, 'Colors', 'k','Symbol','');
 set(h, {'LineStyle'}, {'-'});
 set(h, {'LineWidth'}, {1.5});
 set(findobj(gca,'Tag','Box'), 'Color', 'k');
@@ -116,6 +118,8 @@ title('');
 % Save the second figure
 savePath2 = fullfile('C:\Sara\rice\freshman year\uthealth\Completed (spike analyzed) recordings\results03172025rec2HL', 'BoxPlotsProtractionPercentages03272025.png');
 saveas(h2, savePath2);
+exportgraphics(gcf, 'C:\Sara\rice\freshman year\uthealth\paperfigs\05212025protractionpercentage.pdf', 'ContentType', 'vector');
+
 close(h2); % Close the second figure
 
 % %% addding code for printing mean +- stnd error
